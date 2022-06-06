@@ -23,19 +23,19 @@ def get_drug(drug_name):
     return controller.get_drug(drug_name)
 
 
-@drugs.route('/drugs/update', methods=['POST'])
+@drugs.route('/drugs/update', methods=['PUT'])
 @expects_json(validation.update_drug_quantity)
 def update_quantity():
     return controller.update_quantity(request)
 
 
-@drugs.route('/drugs/add', methods=['POST'])
+@drugs.route('/drugs/add', methods=['PUT'])
 @expects_json(validation.update_drug_quantity)
 def add_quantity():
     return controller.update_quantity(request, "add")
 
 
-@drugs.route('/drugs/remove', methods=['POST'])
+@drugs.route('/drugs/remove', methods=['PUT'])
 @expects_json(validation.update_drug_quantity)
 def remove_quantity():
     return controller.update_quantity(request, "remove")
