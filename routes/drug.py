@@ -1,4 +1,4 @@
-from flask import Blueprint, request, jsonify, escape
+from flask import Blueprint, request
 from flask_expects_json import expects_json
 
 import controllers.drug as controller
